@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vigenère + Keyed Columnar Transposition Cipher</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>🔐 Vigenère + Keyed Columnar Transposition</h1>
+    <div class="form-group">
+      <label for="mode">Mode:</label>
+      <select id="mode">
+        <option value="encrypt">Enkripsi</option>
+        <option value="decrypt">Dekripsi</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="order">Urutan Proses:</label>
+      <select id="order">
+        <option value="vigenere-first">Vigenère → Transposisi</option>
+        <option value="trans-first">Transposisi → Vigenère</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="vigKey">Kunci Vigenère:</label>
+      <input type="text" id="vigKey" placeholder="Masukkan kunci Vigenère (huruf A-Z)" />
+    </div>
+
+    <div class="form-group">
+      <label for="transKey">Kunci Transposisi:</label>
+      <input type="text" id="transKey" placeholder="Masukkan kunci Transposisi (huruf A-Z)" />
+    </div>
+
+    <div class="form-group">
+      <label for="inputText">Teks:</label>
+      <textarea id="inputText" rows="5" placeholder="Masukkan teks di sini..."></textarea>
+    </div>
+
+    <button id="processBtn">Proses</button>
+    <button id="clearBtn" class="secondary">Bersihkan</button>
+
+    <h2>Hasil</h2>
+    <textarea id="outputText" rows="5" readonly></textarea>
+
+    <h2>Langkah-langkah Proses</h2>
+    <pre id="steps" class="steps">Tekan "Proses" untuk melihat langkah-langkah.</pre>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
